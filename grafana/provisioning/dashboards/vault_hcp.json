@@ -688,7 +688,7 @@
         "targets": [
           {
             "exemplar": true,
-            "expr": "(sum(host_filesystem_total_bytes{cluster_id=\"$cluster\"}) - sum(host_filesystem_free_bytes{cluster_id=\"$cluster\"})) / sum(host_filesystem_total_bytes{cluster_id=\"$cluster\"}) * 100",
+            "expr": "(sum(node_filesystem_size_bytes{cluster_id=\"$cluster\"}) - sum(node_filesystem_free_bytes{cluster_id=\"$cluster\"})) / sum(node_filesystem_size_bytes{cluster_id=\"$cluster\"}) * 100",
             "interval": "",
             "legendFormat": "",
             "refId": "A"
