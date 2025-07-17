@@ -605,7 +605,7 @@
         "targets": [
           {
             "exemplar": true,
-            "expr": "avg by (cluster_id) ((1-irate(host_cpu_seconds_total{mode=\"idle\",cluster_id=\"$cluster\"}[5m])) * 100)",
+            "expr": "avg by (cluster_id) ((1-irate(node_cpu_seconds_total{mode=\"idle\",cluster_id=\"$cluster\"}[5m])) * 100)",
             "hide": false,
             "interval": "",
             "legendFormat": "",
